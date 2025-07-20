@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <header>
+        <h1>🌤 Weather Dashboard</h1>
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button onclick="fetchWeather()">Search</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="card">
+            <div class="title">Current Conditions</div>
+            <div class="temp" id="temp">--°C</div>
+            <div><img id="icon" class="icon" src="" alt="weather icon"></div>
+            <div id="condition">--</div>
+            <div id="location">--</div>
+        </div>
+        <div class="card">
+            <div class="title">3-Day Forecast</div>
+            <canvas id="forecastChart"></canvas>
+        </div>
+        <div class="card">
+            <div class="title">Humidity & Pressure</div>
+            <p>Humidity: <span id="humidity">--%</span></p>
+            <p>Pressure: <span id="pressure">-- mb</span></p>
+        </div>
+        <div class="card">
+            <div class="title">Wind Speed & Direction</div>
+            <p>Speed: <span id="wind">-- km/h</span></p>
+            <p>Direction: <span id="windDir">--</span></p>
+            <div class="compass-container">
+                <div class="arrow" id="windArrow"></div>
+                <img src="https://bing.com/th/id/OIP.MTGeYSRxkOgikHc_Tjv4aAHaFJ?w=270&h=187&c=7&r=0&o=7&cb=thvnextc2&dpr=1.3&pid=1.7&rm=3" width="150" alt="compass">
+            </div>
+        </div>
+        <div class="card">
+            <div class="title">Sunrise & Sunset</div>
+            <p>🌅 Sunrise: <span id="sunrise">--</span></p>
+            <p>🌇 Sunset: <span id="sunset">--</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> </body>
+</html>
